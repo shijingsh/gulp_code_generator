@@ -2,7 +2,7 @@
   "name": "gulpCodeGenerator",
   "version": "1.0.0",
   "description": "java code generator by gulp!",
-  "homepage": "",
+  "homepage": "https://github.com/liukefu2050/gulp_code_generator#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/liukefu2050/gulp_code_generator.git"
@@ -11,10 +11,13 @@
     "name": "liukefu",
     "email": "liukefu2050@sina.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-rename": "^1.2.2",
-    "through2": "^2.0.3"
+    "through2": "^2.0.3",
+    "fs":"0.0.1-security",
+    "path":"^0.12.7",
+    "merge-stream":"^1.0.1"
   }
 }

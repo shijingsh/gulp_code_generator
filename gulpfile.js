@@ -2,23 +2,58 @@
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
     through2=require("through2");
+var fs = require('fs');
+var path = require('path');
+var merge = require('merge-stream');
+
+function getFolders(dir) {
+    return fs.readdirSync(dir)
+        .filter(function(file) {
+            return fs.statSync(path.join(dir, file)).isDirectory();
+        });
+}
+
+function getFiles(dir) {
+    return fs.readdirSync(dir)
+        .filter(function(file) {
+            return !fs.statSync(path.join(dir, file)).isDirectory();
+        });
+}
+
+function getDeepFiles(dir) {
+    //读取一级目录下的文件
+    var arr = getFiles(dir)||[];
+    //读取二级目录下的文件
+    var folders = getFolders(dir);
+    folders.map(function(folder) {
+        //console.log(folder)
+        var path = dir+folder+"/";
+        var files = getFiles(path);
+        files.map(function(file) {
+            //console.log(file);
+            arr.push(path+file);
+        });
+    });
+    return arr;
+}
 
 gulp.task("demo",function(){
-
+    //please change moduleName for yourself
     var moduleName = "order";
 
-
-    function createWithDemo(moduleName){
+    function createModuleWithDemo(moduleName){
 
         //输出目录
-        var targetFolder = "." + moduleName;
+        var targetFolder = "./" + moduleName;
 
         //模板文件源目录
-        var templateSourceFolder = "./java/com/mg/";
+        var templateSourceFolder = "./demo/";
 
         //替换字符串
         function replaceTag(data) {
-            data = data.replace(/Demo/mg, moduleName);
+            //首字母大写
+            var ucModuleName = moduleName.substring(0,1).toUpperCase()+moduleName.substring(1);
+            data = data.replace(/Demo/mg, ucModuleName);
             return data.replace(/demo/mg, moduleName);
         }
 
@@ -31,13 +66,17 @@ gulp.task("demo",function(){
             });
         }
 
-
-        gulp.src(templateSourceFolder + "demo/controller/DemoController.java")
-            .pipe(rename(moduleName + ".java"))
-            .pipe(modify(replaceTag))
-            .pipe(gulp.dest(targetFolder + moduleName));
+        var templateFiles = getDeepFiles(templateSourceFolder);
+        var tasks = templateFiles.map(function(file) {
+            var newFile = replaceTag(file)
+            gulp.src(file)
+                .pipe(rename(newFile))
+                .pipe(modify(replaceTag))
+                .pipe(gulp.dest(targetFolder));
+            return null;
+        });
 
     }
 
-    createWithDemo(moduleName);
+    createModuleWithDemo(moduleName);
 });
