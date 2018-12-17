@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class DemoServiceImpl extends BaseServiceImpl<DemoEntity> implements DemoService {
     @Autowired
     private DemoDao demoDao;
-    @Transactional
-    public PageTableVO findPageList(PageTableVO pageTableVO) {
+    @Transactional(readOnly=true)
+    public PageTableVO findPageList() {
 
         return null;
     }
