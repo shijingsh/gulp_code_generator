@@ -39,7 +39,7 @@ function getDeepFiles(dir) {
 
 gulp.task("demo",function(){
     //please change moduleName for yourself
-    var moduleName = "order";
+    var moduleName = "saleRule";
 
     function createModuleWithDemo(moduleName){
         //输出目录

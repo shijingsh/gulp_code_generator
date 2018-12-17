@@ -16,8 +16,8 @@
     "gulp": "^3.8.11",
     "gulp-rename": "^1.2.2",
     "through2": "^2.0.3",
-    "fs":"0.0.1-security",
-    "path":"^0.12.7",
-    "merge-stream":"^1.0.1"
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "merge-stream": "^1.0.1"
   }
 }
