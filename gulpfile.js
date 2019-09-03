@@ -37,10 +37,10 @@ function getDeepFiles(dir) {
     return arr;
 }
 
-gulp.task("demo",function(){
+gulp.task('demo', done => {
     //please change moduleName for yourself
-    var moduleName = "saleRule";
-
+    var moduleName = "form";
+    console.log('moduleName:'+moduleName);
     function createModuleWithDemo(moduleName){
         //输出目录
         var targetFolder = "./" + moduleName;
@@ -57,7 +57,7 @@ gulp.task("demo",function(){
         function modify(modifier) {
             return through2.obj(function (file, encoding, done) {
                 var content = modifier(String(file.contents));
-                file.contents = new Buffer(content);
+                file.contents = new Buffer.from(content);
                 this.push(file);
                 done();
             });
@@ -76,4 +76,6 @@ gulp.task("demo",function(){
     }
 
     createModuleWithDemo(moduleName);
+    done();
 });
+
