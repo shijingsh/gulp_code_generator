@@ -13,7 +13,7 @@ public class DemoServiceImpl extends BaseServiceImpl<DemoEntity> implements Demo
     @Autowired
     private DemoDao demoDao;
     @Transactional(readOnly=true)
-    public PageTableVO findPageList() {
+    public PageTableVO findPageList(PageTableVO pageTableVO) {
 
         return null;
     }

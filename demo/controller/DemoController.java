@@ -50,7 +50,9 @@ public class DemoController {
     @ResponseBody
     @RequestMapping("/listPage")
     public String listPage(HttpServletRequest req) {
-        PageTableVO vo = demoService.findPageList();
+        PageTableVO param =  WebUtil.getJsonBody(req, PageTableVO.class);
+
+        PageTableVO vo = demoService.findPageList(param);
 
         return JsonResponse.success(vo, null);
     }

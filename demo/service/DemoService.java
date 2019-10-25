@@ -6,5 +6,5 @@ import com.mg.framework.entity.vo.PageTableVO;
 
 public interface DemoService extends BaseService<DemoEntity>{
 
-    PageTableVO findPageList();
+    PageTableVO findPageList(PageTableVO pageTableVO);
 }
