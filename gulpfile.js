@@ -41,9 +41,9 @@ gulp.task('demo', done => {
     //please change moduleName for yourself
     //var moduleName = "niceLuckDraw";
     //var packageName = "nice";
-    var moduleName = "niceLuckDrawNum";
-    var packageName = "nice";
-    var entityPackageName = "nice";
+    var moduleName = "integralRecord";
+    var packageName = "integral";
+    var entityPackageName = "integral";
     console.log('moduleName:'+moduleName);
     console.log('packageName:'+packageName);
     console.log('entityPackageName:'+entityPackageName);
