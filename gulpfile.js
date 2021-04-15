@@ -41,9 +41,11 @@ gulp.task('demo', done => {
     //please change moduleName for yourself
     //var moduleName = "niceLuckDraw";
     //var packageName = "nice";
-    var moduleName = "integralRecord";
-    var packageName = "integral";
-    var entityPackageName = "integral";
+    var moduleName = "integralRecord";  //模块名
+    var packageName = "integral";       //包名
+    var entityPackageName = "integral"; //实体类所在包名
+    var cnGlobalApiName = "积分管理";   //中文全局模块名
+    var cnApiName = "积分记录";         //中文子模块名
     console.log('moduleName:'+moduleName);
     console.log('packageName:'+packageName);
     console.log('entityPackageName:'+entityPackageName);
@@ -59,6 +61,9 @@ gulp.task('demo', done => {
             //替换包名
             data = data.replace(/demoPackage/mg, packageName);
             data = data.replace(/demoEntityPackage/mg, entityPackageName);
+            //替换注释
+            data = data.replace(/cnGlobalApiName/mg, cnGlobalApiName);
+            data = data.replace(/cnApiName/mg, cnApiName);
             //替换大写
             data = data.replace(/Demo/mg, ucModuleName);
             //替换小写

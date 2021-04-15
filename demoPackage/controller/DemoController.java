@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-@Api(tags = "Demo管理")
+@Api(tags = "cnGlobalApiName")
 @Controller
 @RequestMapping(value = "/demo",
         produces = "application/json; charset=UTF-8")
@@ -25,7 +25,7 @@ public class DemoController {
      * 获取
      * @return
      */
-    @ApiOperation(value = "根据ID查询")
+    @ApiOperation(value = "根据ID查询cnApiName")
     @ResponseBody
     @RequestMapping("/get")
     public String get(String id) {
@@ -38,7 +38,7 @@ public class DemoController {
      * 保存
      * @return
      */
-    @ApiOperation(value = "保存")
+    @ApiOperation(value = "保存cnApiName")
     @ResponseBody
     @RequestMapping("/post")
     public String post(@RequestBody DemoEntity entity) {
@@ -49,7 +49,7 @@ public class DemoController {
      * 分页列表
      * @return          PageTableVO
      */
-    @ApiOperation(value = "查询分页列表")
+    @ApiOperation(value = "cnApiName查询分页列表")
     @ResponseBody
     @RequestMapping("/listPage")
     public String listPage(@RequestBody SearchVo searchVo) {
