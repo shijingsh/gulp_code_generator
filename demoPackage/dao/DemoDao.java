@@ -1,7 +1,7 @@
-package com.mg.demo.dao;
+package com.mg.demoPackage.dao;
 
 import com.mg.common.utils.BaseDao;
-import com.mg.entity.info.DemoEntity;
+import com.mg.entity.demoEntityPackage.DemoEntity;
 
 public interface DemoDao extends BaseDao<DemoEntity> {
 

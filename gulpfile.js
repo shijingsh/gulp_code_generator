@@ -39,18 +39,29 @@ function getDeepFiles(dir) {
 
 gulp.task('demo', done => {
     //please change moduleName for yourself
-    var moduleName = "form";
+    //var moduleName = "niceLuckDraw";
+    //var packageName = "nice";
+    var moduleName = "niceLuckDrawNum";
+    var packageName = "nice";
+    var entityPackageName = "nice";
     console.log('moduleName:'+moduleName);
+    console.log('packageName:'+packageName);
+    console.log('entityPackageName:'+entityPackageName);
     function createModuleWithDemo(moduleName){
         //输出目录
-        var targetFolder = "./" + moduleName;
+        var targetFolder = "./output" ;
         //模板文件源目录
-        var templateSourceFolder = "./demo/";
+        var templateSourceFolder = "./demoPackage/";
         //替换字符串
         function replaceTag(data) {
             //首字母大写
             var ucModuleName = moduleName.substring(0,1).toUpperCase()+moduleName.substring(1);
+            //替换包名
+            data = data.replace(/demoPackage/mg, packageName);
+            data = data.replace(/demoEntityPackage/mg, entityPackageName);
+            //替换大写
             data = data.replace(/Demo/mg, ucModuleName);
+            //替换小写
             return data.replace(/demo/mg, moduleName);
         }
 

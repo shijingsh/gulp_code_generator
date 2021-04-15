@@ -1,7 +1,7 @@
-package com.mg.demo.service;
+package com.mg.demoPackage.service;
 
 import com.mg.common.utils.BaseService;
-import com.mg.entity.info.DemoEntity;
+import com.mg.entity.demoEntityPackage.DemoEntity;
 import com.mg.framework.entity.vo.PageTableVO;
 import com.mg.util.SearchVo;
 

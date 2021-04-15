@@ -1,7 +1,7 @@
-package com.mg.demo.controller;
+package com.mg.demoPackage.controller;
 
-import com.mg.demo.service.DemoService;
-import com.mg.entity.info.DemoEntity;
+import com.mg.demoPackage.service.DemoService;
+import com.mg.entity.demoEntityPackage.DemoEntity;
 import com.mg.framework.entity.vo.PageTableVO;
 import com.mg.framework.utils.JsonResponse;
 import com.mg.util.SearchVo;

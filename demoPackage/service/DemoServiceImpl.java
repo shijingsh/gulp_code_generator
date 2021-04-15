@@ -1,18 +1,11 @@
-package com.mg.demo.service;
+package com.mg.demoPackage.service;
 
 import com.mg.common.utils.BaseServiceImpl;
 import com.mg.common.utils.LazyLoadUtil;
-import com.mg.demo.dao.DemoDao;
-import com.mg.entity.custom.CustomEntity;
-import com.mg.entity.info.DemoEntity;
-import com.mg.entity.info.HelpEntity;
-import com.mg.entity.info.QDemoEntity;
-import com.mg.entity.info.QHelpEntity;
-import com.mg.entity.shop.ShopEntity;
+import com.mg.demoPackage.dao.DemoDao;
+import com.mg.entity.demoEntityPackage.DemoEntity;
+import com.mg.entity.demoEntityPackage.QDemoEntity;
 import com.mg.framework.entity.vo.PageTableVO;
-import com.mg.framework.utils.RequestHolder;
-import com.mg.framework.utils.WebUtil;
-import com.mg.info.vo.HelpSearchVo;
 import com.mg.util.SearchVo;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.apache.commons.lang3.StringUtils;
@@ -20,9 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 @Service
