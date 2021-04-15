@@ -22,7 +22,7 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
     /**
-     * 获取
+     * 获取cnApiName
      * @return
      */
     @ApiOperation(value = "根据ID查询cnApiName")
@@ -35,7 +35,7 @@ public class DemoController {
     }
 
     /**
-     * 保存
+     * 保存cnApiName
      * @return
      */
     @ApiOperation(value = "保存cnApiName")
@@ -46,7 +46,7 @@ public class DemoController {
         return JsonResponse.success(entity, null);
     }
     /**
-     * 分页列表
+     * cnApiName分页列表
      * @return          PageTableVO
      */
     @ApiOperation(value = "cnApiName查询分页列表")
