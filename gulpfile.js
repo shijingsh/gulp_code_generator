@@ -41,11 +41,11 @@ gulp.task('demo', done => {
     //please change moduleName for yourself
     //var moduleName = "niceLuckDraw";
     //var packageName = "nice";
-    var moduleName = "integralRecord";  //模块名
-    var packageName = "integral";       //包名
-    var entityPackageName = "integral"; //实体类所在包名
-    var cnGlobalApiName = "积分管理";   //中文全局模块名
-    var cnApiName = "积分记录";         //中文子模块名
+    var moduleName = "shareResult";  //模块名
+    var packageName = "share";       //包名
+    var entityPackageName = "share"; //实体类所在包名
+    var cnGlobalApiName = "分享管理";   //中文全局模块名
+    var cnApiName = "分享相应";         //中文子模块名
     console.log('moduleName:'+moduleName);
     console.log('packageName:'+packageName);
     console.log('entityPackageName:'+entityPackageName);

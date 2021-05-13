@@ -42,7 +42,7 @@ public class DemoController {
     @ResponseBody
     @RequestMapping("/post")
     public String post(@RequestBody DemoEntity entity) {
-        demoService.save(entity);
+        demoService.saveDemo(entity);
         return JsonResponse.success(entity, null);
     }
     /**
