@@ -8,4 +8,6 @@ import com.mg.util.SearchVo;
 public interface DemoService extends BaseService<DemoEntity>{
 
     PageTableVO findPageList(SearchVo searchVo);
+
+    DemoEntity saveDemo(DemoEntity entity);
 }
