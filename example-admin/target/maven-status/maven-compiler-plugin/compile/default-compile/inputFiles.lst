@@ -1,9 +1,0 @@
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\demo\controller\DemoController.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\AdminApplication.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\config\WebMvcConfigurer.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\demo\dao\DemoDao.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\demo\service\DemoService.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\demo\service\DemoServiceImpl.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\entity\demo\DemoEntity.java
-D:\work5\gulp_code_generator\example-admin\src\main\java\com\xiushang\admin\config\SwaggerConfiguration.java
-D:\work5\gulp_code_generator\example-admin\target\generated-sources\java\com\xiushang\entity\demo\QDemoEntity.java
