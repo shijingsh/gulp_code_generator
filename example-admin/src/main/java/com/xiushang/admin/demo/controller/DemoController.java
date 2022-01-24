@@ -1,7 +1,7 @@
 package com.xiushang.admin.demo.controller;
 
-import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.xiushang.admin.demo.service.DemoService;
+import com.xiushang.admin.demo.vo.DemoSaveVo;
 import com.xiushang.entity.demo.DemoEntity;
 import com.xiushang.framework.entity.vo.PageTableVO;
 import com.xiushang.framework.entity.vo.SearchVo;
@@ -13,13 +13,17 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 
 @Api(tags = "cnGlobalApiName")
 @Controller
-@RequestMapping(value = "/demo",
+@RequestMapping(value = "/api/demo",
         produces = "application/json; charset=UTF-8")
+@Validated
 public class DemoController {
     @Autowired
     private DemoService demoService;
@@ -28,8 +32,8 @@ public class DemoController {
      */
     @ApiOperation(value = "根据ID查询cnApiName")
     @ResponseBody
-    @RequestMapping("/get")
-    public CommonResult<DemoEntity> get(String id) {
+    @GetMapping("/get")
+    public CommonResult<DemoEntity> get(@ApiParam(value = "id主键",required = true) String id) {
         DemoEntity entity = demoService.get(id);
 
         return CommonResult.success(entity);
@@ -42,9 +46,9 @@ public class DemoController {
     @ResponseBody
     @PostMapping("/post")
     @Secured({SecurityRole.ROLE_USER})
-    public CommonResult<DemoEntity> post(@RequestBody DemoEntity entity) {
-        demoService.saveDemo(entity);
-        return CommonResult.success(entity);
+    public CommonResult<DemoEntity> post(@Valid @RequestBody DemoSaveVo demoSaveVo) {
+        demoService.saveDemo(demoSaveVo);
+        return CommonResult.success();
     }
 
     /**
@@ -61,11 +65,10 @@ public class DemoController {
     }
     /**
      * cnApiName分页列表
-     * @return          PageTableVO
      */
     @ApiOperation(value = "cnApiName查询分页列表")
     @ResponseBody
-    @RequestMapping("/listPage")
+    @PostMapping("/listPage")
     public CommonResult<PageTableVO<DemoEntity>> listPage(@RequestBody SearchVo searchVo) {
         PageTableVO vo = demoService.findPageList(searchVo);
 
