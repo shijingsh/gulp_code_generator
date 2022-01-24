@@ -1,8 +1,8 @@
-package com.xiushang.admin.demo.controller;
+package com.xiushang.admin.demoPackage.controller;
 
-import com.xiushang.admin.demo.service.DemoService;
-import com.xiushang.admin.demo.vo.DemoSaveVo;
-import com.xiushang.entity.demo.DemoEntity;
+import com.xiushang.admin.demoPackage.service.DemoService;
+import com.xiushang.admin.demoPackage.vo.DemoSaveVo;
+import com.xiushang.entity.demoEntityPackage.DemoEntity;
 import com.xiushang.framework.entity.vo.PageTableVO;
 import com.xiushang.framework.entity.vo.SearchVo;
 import com.xiushang.framework.log.CommonResult;

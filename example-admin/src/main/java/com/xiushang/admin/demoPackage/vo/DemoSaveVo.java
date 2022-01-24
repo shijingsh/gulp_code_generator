@@ -1,4 +1,4 @@
-package com.xiushang.admin.demo.vo;
+package com.xiushang.admin.demoPackage.vo;
 
 import com.xiushang.framework.entity.vo.BaseVO;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,7 +1,7 @@
-package com.xiushang.admin.demo.mapper;
+package com.xiushang.admin.demoPackage.mapper;
 
-import com.xiushang.admin.demo.vo.DemoSaveVo;
-import com.xiushang.entity.demo.DemoEntity;
+import com.xiushang.admin.demoPackage.vo.DemoSaveVo;
+import com.xiushang.entity.demoEntityPackage.DemoEntity;
 import com.xiushang.framework.model.BaseMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

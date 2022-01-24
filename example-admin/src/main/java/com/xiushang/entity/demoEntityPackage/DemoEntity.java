@@ -1,4 +1,4 @@
-package com.xiushang.entity.demo;
+package com.xiushang.entity.demoEntityPackage;
 
 import com.xiushang.entity.BaseEntity;
 

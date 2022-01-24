@@ -51,9 +51,9 @@ gulp.task('demo', done => {
     console.log('entityPackageName:'+entityPackageName);
     function createModuleWithDemo(moduleName){
         //输出目录
-        var targetFolder = "./output" ;
+        var targetFolder = "./example-admin/src/main/java/com/xiushang/admin" ;
         //模板文件源目录
-        var templateSourceFolder = "./demoPackage/";
+        var templateSourceFolder = "./example-admin/src/main/java/com/xiushang/admin/demo/";
         //替换字符串
         function replaceTag(data) {
             //首字母大写
