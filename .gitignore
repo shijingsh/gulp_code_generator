@@ -10,7 +10,6 @@ build/
 
 # Xcode
 #
-build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -30,8 +29,6 @@ project.xcworkspace
 
 # Android/IJ
 #
-.idea
-.gradle
 local.properties
 
 # node.js
@@ -48,3 +45,25 @@ pods
 .vscode
 /yarn.lock
 /output/
+
+target/
+classes/
+.settings/
+META-INF/
+/.idea
+.project
+.classpath
+.mymetadata
+path-develop.properties
+/target
+rebel.xml
+/test-output/
+/.tern-project
+*.bak
+.tgitconfig
+logback-test.xml
+/webapp/.tern-project
+/out
+/Users
+*.log
+/*.iml

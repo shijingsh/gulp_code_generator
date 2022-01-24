@@ -1,7 +1,6 @@
-com\xiushang\admin\config\SwaggerConfiguration.class
-com\xiushang\admin\config\WebMvcConfigurer.class
-com\xiushang\admin\news\controller\NewsController.class
-com\xiushang\admin\validation\controller\ValidateController.class
-com\xiushang\admin\validation\vo\ParamVo$IdCardDTO.class
-com\xiushang\admin\validation\vo\ParamVo.class
+com\xiushang\admin\demo\dao\DemoDao.class
+com\xiushang\admin\demo\service\DemoService.class
+com\xiushang\entity\demo\DemoEntity.class
+com\xiushang\admin\demo\controller\DemoController.class
+com\xiushang\entity\demo\QDemoEntity.class
 com\xiushang\AdminApplication.class

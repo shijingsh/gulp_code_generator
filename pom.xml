@@ -14,9 +14,9 @@
         <module>example-admin</module>
     </modules>
     <groupId>com.xiushang</groupId>
-    <artifactId>xiushang-boot-example</artifactId>
+    <artifactId>gulp_code_generator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>xiushang-boot-example</name>
+    <name>gulp_code_generator</name>
     <description>xiushang Project For Spring Boot</description>
 
     <properties>
